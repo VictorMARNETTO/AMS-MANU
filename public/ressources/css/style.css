@@ -1,0 +1,248 @@
+/* ===========================================
+                    BOOT
+=========================================== */
+p {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+html,body,nav,footer {
+    background-color: #dbdbdb;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: #ffff;
+     /* linear-gradient(#c9c9c9, #dbdbdb); */
+}
+
+section{
+    min-height: 88.8vh;
+}
+
+.row {
+    width: 100%;
+    /* border: 2px black solid; */
+}
+
+input, textarea {
+  width: 100%;
+}
+
+.page-title {
+  background-color: red;
+  margin: 0 ;
+  padding: 0 ;
+  margin-top: 50px;
+  width: 45%;
+}
+
+.page-title h1{
+  margin-left: 50%;
+  padding: 15px;
+}
+/*
+                /BOOT 
+*/
+
+/* ===========================================
+                    INDEX
+=========================================== */
+
+.accueil {
+    background-image: url("/ressources/images/ams-manu-header.png");
+    /* background-position: center; */
+    background-size: cover;
+}
+
+.accueil-text {
+    position: absolute;
+    padding: 5%;
+    left: 5%;
+    right: 5%;
+    margin-top: 10%;
+    background-color: rgba(15, 15, 15, 0.4);
+    border: 5px white double;
+    color: white;
+}
+
+.accueil-text h1 {
+    text-align: center;
+}
+
+.presentation {
+    margin-top: 5%;
+}
+
+/* ===========================================
+                    NAVBAR
+=========================================== */
+
+.navbar {
+    border-bottom: 2px black solid;
+    background-color: x;
+}
+
+.nav-logo {
+    width: 10%;
+}
+
+.logo {
+    width: 100%;
+}
+.navbar-center {
+float: none;
+position: absolute;
+top: 50%;
+left: 50%; 
+transform: translate(-50%, -50%);
+}
+
+.navbar-center li {
+    /* border-top: 2px black solid;
+    border-right: 2px black solid;
+    border-bottom: none; */
+    margin-left: 15px;
+    /* background-color: #c40303; */
+  }
+
+.navbar-center li a{
+  color: #c40303 !important;
+  /* border: 2px black solid;
+  border-radius: 10px; */
+  font-family: 'Oswald', sans-serif; 
+  font-size: 22px;
+}
+
+/* .navbar-center li.left-link{
+    border-left: 2px black solid;
+} */
+
+/* ===========================================
+                    FOOTER
+=========================================== */
+
+footer {
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.footer-map {
+  margin-top:15px;
+}
+/* ===========================================
+                    CARDS
+=========================================== */
+
+.card {
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+}
+
+
+
+/* ===========================================
+                    DEVIS
+=========================================== */
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+.snip1551 {
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 6px;
+  width: 100%;
+  color: #ffffff;
+  font-size: 16px;
+  background-color: #000000;
+}
+
+.snip1551 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.snip1551 img {
+  vertical-align: top;
+  max-width: 100%;
+  backface-visibility: hidden;
+}
+
+.snip1551 figcaption {
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  z-index: 1;
+  border: 1px solid #ffffff;
+  overflow: hidden;
+  padding: 0;
+  box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.snip1551 h3 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 7px 15px;
+  margin: 0;
+  font-weight: normal;
+  font-size: 1em;
+  letter-spacing: 2px;
+  display: inline-block;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transform: translate(0%, 100%);
+  transform: translate(0%, 100%);
+  color: rgba(255, 255, 255, 0);
+}
+
+.snip1551 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.snip1551:hover > img,
+.snip1551.hover > img {
+  opacity: 0.5;
+}
+
+.snip1551:hover h3,
+.snip1551.hover h3 {
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  color: #ffffff;
+}
+
+/* ===========================================
+                    TEST TABLEAU
+=========================================== */
+
+/* TEST TABLEAU */
+tbody td{
+  padding: 30px;
+}
+
+tbody tr:nth-child(odd){
+  background-color: grey;
+  color: #fff;
+}
+
+/* ===========================================
+                    EDIT
+=========================================== */
+

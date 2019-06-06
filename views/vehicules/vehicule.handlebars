@@ -1,0 +1,56 @@
+<section class="vehicule" id="vehicule">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="title">AUDI R8 {{!-- {{vehicule.title}} --}} </h1>
+            </div>
+            <div class="col-md-6">
+                <h1 class="title">3500 {{!-- {{vehicule.price}} --}}€</h1>
+            </div>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                {{!-- {{each.image}} --}}
+                <div class="carousel-item active">
+                    <img src="/ressources/images/audi.jpg{{!-- {{vehicule.image1}} --}}" class="d-block w-100" alt="">
+                </div>
+                {{!-- {{/each}} --}}
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <ul>
+                    <li>Marque: Audi {{vehicule.marque}}</li>
+                    <li>Modèle: R8 {{vehicule.modele}}</li>
+                    <li>Année: 2019 {{vehicule.annee}}</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul>
+                    <li>Kilometrage: 52000 {{vehicule.kilometers}} Km</li>
+                    <li>Energie: Essence {{vehicule.energy}}</li>
+                    <li>Boite de vitesse: manuelle {{vehicule.speed}}</li>
+                </ul>
+            </div>
+        </div>
+        <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident natus distinctio animi
+            officia quidem omnis, magni earum iusto obcaecati enim accusamus quas laudantium qui dolores quos eius
+            blanditiis. Dolore, commodi.
+            {{!-- {{{article.description}}} --}}
+        </p>
+    </div>
+    </div>
+</section>

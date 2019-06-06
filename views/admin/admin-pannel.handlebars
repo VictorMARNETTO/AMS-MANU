@@ -1,0 +1,58 @@
+<section class="admin-pannel">
+    <div class="container">
+        <div class="row">
+            <h1>Liste Des Véhicules</h1>
+        </div>
+        <div class="row">
+
+            <a href="/add-vehicule">
+            <i class="fas fa-plus-circle fa-5x" style="color: green;"></i>
+            </a>
+
+        </div>
+        <div class="row vehicle-table">
+            <table border="1" class="table table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Année</th>
+                        <th scope="col">Marque</th>
+                        <th scope="col">Vitesse(boites)</th>
+                        <th scope="col">Prix</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {{!-- {{each}} --}}
+                    <tr>
+                        <th scope="row">{{vehicule._id}}</th>
+                        <td>{{vehicule.nom}}</td>
+                        <td>{{vehicule.date}}</td>
+                        <td>{{vehicule.annee}}</td>
+                        <td>{{vehicule.marque}}</td>
+                        <td>{{vehicule.speed}}</td>
+                        <td>{{vehicule.price}}</td>
+                        <td>{{vehicule.actions}}</td>
+                    </tr>
+                    {{!-- {{/each}} --}}
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $("tr:odd").css({
+                    "background-color": "red",
+                    "color": "blue"
+                });
+            });
+        </script>
+
+
+
+    </div>
+
+</section>
