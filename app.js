@@ -20,11 +20,11 @@ const vehiculeSingleController = require('./controllers/vehiculeSingle')
 ,     vehiculeDelete = require('./controllers/vehiculeDelete');
 
 // USERS
-const userCreate = require('./controllers/userCreate')
-,     userRegister = require('./controllers/userRegister')
-,     userLogin = require('./controllers/userLogin')
-,     userLoginAuth = require('./controllers/userLoginAuth')
-,     userLogout = require('./controllers/userLogout');
+const userCreate = require('./controllers/adminCreate')
+,     userRegister = require('./controllers/adminRegister')
+,     userLogin = require('./controllers/adminLogin')
+,     userLoginAuth = require('./controllers/adminLoginAuth')
+,     userLogout = require('./controllers/adminLogout');
 
 // express
 const app = express()
@@ -41,6 +41,35 @@ mongoose
 const MongoStore = MongoStore(expresspSession)
 
 app.use(connectFlash())
+
+app.use(expressSession({ // utilise express-session
+    secret: 'securite', // code secret 
+    name: 'biscuit', // cookie
+    saveUninitialized: true,
+    resave: false,
+
+    store: new mongoStore(
+        {mongooseConnection: mongoose.connection}
+    )
+}))
+
+app.use(bodyParser.json()) // utilisation du body parser 
+app.use(bodyParser.urlencoded({ // utilisation de l'encodage pour camoufler le code secret 
+    extended: true
+}))
+app.use(fileupload())
+
+const auth            = require('./middleware/auth') // authentification
+, redirectAuthSuccess = require("./middleware/redirectAuthSuccess")// rediriger sur la reussite dez l'authentification et ses debouches
+
+var Handlebars        = require("handlebars"); // utilisation d'handlebars
+var MomentHandler     = require("handlebars.moment");// moment permet de mettre des dates 
+MomentHandler.registerHelpers(Handlebars);
+// limit an array to a maximum of elements (from the start)
+Handlebars.registerHelper('limit', function (arr, limit) { // permet de limiter les publications
+    if (!Array.isArray(arr)) { return []; }
+        return arr.slice(0, limit);
+  });
 
 
 app.use(express.static('public'));
