@@ -2,10 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h1 class="title">AUDI R8 {{!-- {{vehicule.title}} --}} </h1>
+                <h1 class="title">{{vehicule.title}}</h1>
             </div>
             <div class="col-md-6">
-                <h1 class="title">3500 {{!-- {{vehicule.price}} --}}€</h1>
+                <h1 class="title">{{vehicule.price}} €</h1>
             </div>
         </div>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -33,16 +33,16 @@
         <div class="row">
             <div class="col-md-6">
                 <ul class="content">
-                    <li>Marque: Audi {{vehicule.marque}}</li>
-                    <li>Modèle: R8 {{vehicule.modele}}</li>
-                    <li>Année: 2019 {{vehicule.annee}}</li>
+                    <li>Marque: Audi {{vehicule.mark}}</li>
+                    <li>Modèle: R8 {{vehicule.model}}</li>
+                    <li>Année: 2019 {{vehicule.year}}</li>
                 </ul>
             </div>
             <div class="col-md-6">
                 <ul class="content">
                     <li>Kilometrage: 52000 {{vehicule.kilometers}} Km</li>
                     <li>Energie: Essence {{vehicule.energy}}</li>
-                    <li>Boite de vitesse: manuelle {{vehicule.speed}}</li>
+                    <li>Boite de vitesse: manuelle {{vehicule.gearbox}}</li>
                 </ul>
             </div>
         </div>
