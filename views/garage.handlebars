@@ -1,0 +1,67 @@
+<section class="achats" id="achats">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                {{!--===============================================================
+                                        TITRE
+                ===============================================================--}}
+                <h3>Achats et Ventes</h3>
+            </div>
+            <div class="col-md-6">
+                {{!--===============================================================
+                                        BUTTON
+                ===============================================================--}}
+                <a href="/devis-ventes">
+                    <button class="btn btn-danger">Vendre mon vehicule</button>
+                </a>
+            </div>
+        </div>
+        {{!--===============================================================
+                                        SEARCH
+                ===============================================================--}}
+        {{!-- <div class="row">
+            <div class="col-md-6">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+        =============================================================== --}}
+        {{!-- VEHICLES --}}
+        {{!-- =============================================================== --}}
+        <div class="container">
+            <div class="row">
+                {{!-- EACH --}}
+                {{#each posts}}
+                <div class="col-md">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{{image}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{title}}</h5>
+                            <div class="row">
+                                <div class="col-md-6 card-left-list">
+                                    <ul>
+                                        <li>{{energy}}</li>
+                                        <li>{{gearbox}}</li>
+                                        <li>{{kilometers}}kms</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 card-right-list">
+                                    <ul>
+                                        <li>{{mark}}</li>
+                                        <li>{{model}}</li>
+                                        <li{{year}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="/vehicule/{{_id}}" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+                {{!-- /EACH --}}
+            </div>
+        </div>
+    </div>
+</section>

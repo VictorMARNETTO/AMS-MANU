@@ -4,7 +4,7 @@
         <h1>Ajouter un véhicule</h1>
     </div>
     <div class="container is-fullhd">
-        <form action="/articles/post" method="post" enctype="multipart/form-data">
+        <form action="/vehicule/post" method="post" enctype="multipart/form-data">
             <div class="row">
                 <div class="com-md-12">
                     <div class="field">
@@ -20,7 +20,7 @@
                     <div class="field">
                         <label class="label">Marque</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Text input" name="title">
+                            <input class="input" type="text" placeholder="Text input" name="mark">
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                     <div class="field">
                         <label class="label">Modèle</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Text input" name="title">
+                            <input class="input" type="text" placeholder="Text input" name="model">
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                     <div class="field">
                         <label class="label">Année</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Text input" name="title">
+                            <input class="input" type="text" placeholder="Text input" name="year">
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                     <div class="field">
                         <label class="label">Energie</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Text input" name="title">
+                            <input class="input" type="text" placeholder="Text input" name="energy">
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                     <div class="field">
                         <label class="label">Kilometrage</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Text input" name="author">
+                            <input class="input" type="text" placeholder="Text input" name="kilometers">
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                     <div class="field">
                         <label class="label">Boite de vitesse</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Text input" name="title">
+                            <input class="input" type="text" placeholder="Text input" name="gearbox">
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                     <div class="field">
                         <label class="label">Prix</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Text input" name="title">
+                            <input class="input" type="text" placeholder="Text input" name="price">
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                     <div class="field">
                         <label class="label">Description</label>
                         <div class="control">
-                            <textarea class="input" type="text" placeholder="Text input" name="title"></textarea>
+                            <textarea class="input" type="text" placeholder="Text input" name="content"></textarea>
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="exampleFormControlFile1">Ajouter les photos</label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1" multiple>
+                        <input type="file" class="form-control-file" name="image" accept="image/png, image/jpeg" id="exampleFormControlFile1" multiple>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,7 @@
         <div class="row">
 
             <a href="/add-vehicule">
-            <i class="fas fa-plus-circle fa-5x" style="color: green;"></i>
+                <i class="fas fa-plus-circle fa-5x" style="color: green;"></i>
             </a>
 
         </div>
@@ -25,19 +25,22 @@
                     </tr>
                 </thead>
                 <tbody>
-
-                    {{!-- {{each}} --}}
+                    {{#each posts}}
                     <tr>
-                        <th scope="row">{{vehicule._id}}</th>
-                        <td>{{vehicule.nom}}</td>
-                        <td>{{vehicule.date}}</td>
-                        <td>{{vehicule.annee}}</td>
-                        <td>{{vehicule.marque}}</td>
-                        <td>{{vehicule.speed}}</td>
-                        <td>{{vehicule.price}}</td>
-                        <td>{{vehicule.actions}}</td>
+                        <th scope="row">{{_id}}</th>
+                        <td>{{title}}</td>
+                        <td>{{createDate}}</td>
+                        <td>{{year}}</td>
+                        <td>{{mark}}</td>
+                        <td>{{gearbox}}</td>
+                        <td>{{price}}</td>
+                        <td>
+                            <a href="/vehicule-edit/{{_id}}"><i class="fas fa-edit"></i></a>
+                            <a href="/vehicule/delete/{{_id}}"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                        {{!-- <td>{{vehicule.actions}}</td> --}}
                     </tr>
-                    {{!-- {{/each}} --}}
+                    {{/each}}
                 </tbody>
             </table>
         </div>
