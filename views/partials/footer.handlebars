@@ -49,9 +49,16 @@
                     <li>
                         <a href="#!">Cookies</a>
                     </li>
+                    {{#if admin}}
+                    <li>
+                        <a href="/admin-pannel">Administration</a>
+                    </li>
+                    {{/if}}
+                    {{#unless admin}}
                     <li>
                         <a href="/admin">Administration</a>
                     </li>
+                    {{/unless}}
                 </ul>
 
             </div>

@@ -17,7 +17,7 @@
             <div class="carousel-inner">
                 {{!-- {{each.image}} --}}
                 <div class="carousel-item active">
-                    <img src="/ressources/images/audi.jpg{{!-- {{vehicule.image1}} --}}" class="d-block w-100" alt="">
+                    <img src="/ressources/images/audi.jpg{{!-- {{image1}} --}}" class="d-block w-100" alt="">
                 </div>
                 {{!-- {{/each}} --}}
             </div>
@@ -33,22 +33,27 @@
         <div class="row">
             <div class="col-md-6">
                 <ul class="content">
-                    <li>Marque: Audi {{vehicule.mark}}</li>
-                    <li>Modèle: R8 {{vehicule.model}}</li>
-                    <li>Année: 2019 {{vehicule.year}}</li>
+                    <label>Marque</label>
+                    <li>{{vehicule.mark}}</li>
+                    <label>Modèle</label>
+                    <li>{{vehicule.model}}</li>
+                    <label>Année</label>
+                    <li>{{vehicule.year}}</li>
                 </ul>
             </div>
             <div class="col-md-6">
                 <ul class="content">
-                    <li>Kilometrage: 52000 {{vehicule.kilometers}} Km</li>
-                    <li>Energie: Essence {{vehicule.energy}}</li>
-                    <li>Boite de vitesse: manuelle {{vehicule.gearbox}}</li>
+                    <label>Kilometrage</label>
+                    <li>{{vehicule.kilometers}} Km</li>
+                    <label>Energie</label>
+                    <li>{{vehicule.energy}}</li>
+                    <label>Boite de vitesse</label>
+                    <li>{{vehicule.gearbox}}</li>
                 </ul>
             </div>
         </div>
-        <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident natus distinctio animi
-            officia quidem omnis, magni earum iusto obcaecati enim accusamus quas laudantium qui dolores quos eius
-            blanditiis. Dolore, commodi.
+        <label>Description</label>
+        <p class="content">{{vehicule.content}}
             {{!-- {{{article.description}}} --}}
         </p>
     </div>

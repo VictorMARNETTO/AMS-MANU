@@ -36,19 +36,19 @@
 
         <!----------------------------------- FORMULAIRE------------------------------------------>
 
-        <form>
+        <form action="/send-contact" method="POST" enctype="multipart/form-data">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="contact-form">
                             <label>Nom:</label>
-                            <input type="text" id="nom" />
+                            <input type="text" id="nom" name="name"/>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="contact-form">
                             <label>Prénom:</label>
-                            <input type="text" id="prénom" />
+                            <input type="text" id="prénom" name="surname"/>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                     <div class="col-md-12">
                         <div class="contact-form">
                             <label>Adresse:</label>
-                            <input type="text" id="adresse" class="contact-message" style="width:70%;">
+                            <input type="text" id="adresse" class="contact-message" name="address" style="width:70%;">
                         </div>
                     </div>
                 </div>
@@ -64,13 +64,13 @@
                     <div class="col-md-6">
                         <div class="contact-form">
                             <label>CP:</label>
-                            <input type="text" id="cp" />
+                            <input type="text" id="cp" name="postalCode"/>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="contact-form">
                             <label>Ville:</label>
-                            <input type="text" id="ville" />
+                            <input type="text" id="ville" name="city"/>
                         </div>
                     </div>
                 </div>
@@ -78,13 +78,13 @@
                     <div class="col-md-4">
                         <div class="contact-form">
                             <label>Téléphone</label>
-                            <input type="tel" id="telephone" />
+                            <input type="tel" id="telephone" name="phone"/>
                         </div>
                     </div>
                     <div class="col-md-8">
                         <div class="contact-form">
                             <label>Email:</label>
-                            <input type="email" id="email" placeholder="ajoutez votre email" />
+                            <input type="email" id="email" name="email" placeholder="ajoutez votre email" />
                         </div>
                     </div>
                 </div>
@@ -93,19 +93,19 @@
                     <div class="col-md-12">
                         <div class="contact-form">
                             <label>Message:</label>
-                            <textarea id="message" rows="3" class="contact-message" style="width:100%;"></textarea>
+                            <textarea id="message" rows="3" class="contact-message" name="message" style="width:100%;"></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <input type="submit" name="upload" id="upload" value="Upload photo" />
+                        <input type="file" name="image" id="image" />
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="contact-form">
-                            <button class="btn btn-contact">Envoyer</button>
+                            <button class="btn btn-contact" type="submit">Envoyer</button>
                         </div>
                     </div>
                 </div>

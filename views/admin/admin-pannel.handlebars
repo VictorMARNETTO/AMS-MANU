@@ -6,7 +6,8 @@
         <div class="row">
 
             <a href="/add-vehicule">
-                <i class="fas fa-plus-circle fa-5x" style="color: green;"></i>
+                <i class="fas fa-plus-circle fa-5x" style="color: green;">
+                </i>
             </a>
 
         </div>
@@ -19,7 +20,10 @@
                         <th scope="col">Date</th>
                         <th scope="col">Année</th>
                         <th scope="col">Marque</th>
+                        <th scope="col">Modèle</th>
+                        <th scope="col">Kilomètres</th>
                         <th scope="col">Vitesse(boites)</th>
+                        <th scope="col">Energie</th>
                         <th scope="col">Prix</th>
                         <th scope="col">Actions</th>
                     </tr>
@@ -29,17 +33,29 @@
                     <tr>
                         <th scope="row">{{_id}}</th>
                         <td>{{title}}</td>
-                        <td>{{createDate}}</td>
+                        <td>{{moment createDate format='DD-MM-YYYY'}}</td>
                         <td>{{year}}</td>
                         <td>{{mark}}</td>
+                        <td>{{model}}</td>
+                        <td>{{kilometers}} Km</td>
                         <td>{{gearbox}}</td>
-                        <td>{{price}}</td>
+                        <td>{{energy}}</td>
+                        <td>{{price}} €</td>
                         <td>
-                            <a href="/vehicule-edit/{{_id}}"><i class="fas fa-edit"></i></a>
-                            <a href="/vehicule/delete/{{_id}}"><i class="fas fa-trash-alt"></i></a>
+                            <a href="/vehicule-edit/{{_id}}"><i class="fas fa-edit fa-lg" style="color: yellow"></i></a>
+                            <i class="fas fa-trash-alt fa-lg" onclick="popupConfirm()" style="cursor:pointer; color:red"></i>
                         </td>
                         {{!-- <td>{{vehicule.actions}}</td> --}}
                     </tr>
+                    <script>
+                        function popupConfirm() {
+                            if (confirm("Etes-vous sur de vouloir supprimer cet article ?")) {
+                                window.location.replace(`/vehicule/delete/{{_id}}`)
+                            } else {
+                                window.location.replace('/admin-pannel')
+                            }
+                        }
+                    </script>
                     {{/each}}
                 </tbody>
             </table>
@@ -53,6 +69,7 @@
                 });
             });
         </script>
+
 
 
 
